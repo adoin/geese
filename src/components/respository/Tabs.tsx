@@ -6,7 +6,7 @@ import { useState } from 'react';
 import ImageWithPreview from '../ImageWithPreview';
 import { MDRender } from '../mdRender/MDRender';
 
-import { RepositoryProps } from '@/types/reppsitory';
+import { RepositoryProps } from '@/types/repository';
 
 const Tabs: NextPage<RepositoryProps> = ({ repo }) => {
   const [selectTab, setSelectTab] = useState<string>('summary');
@@ -22,7 +22,7 @@ const Tabs: NextPage<RepositoryProps> = ({ repo }) => {
       return (
         <>
           {repo.image_url && (
-            <div className='my-2 flex cursor-zoom-in justify-center'>
+            <div className='flex cursor-zoom-in justify-center pt-2'>
               <ImageWithPreview
                 src={repo?.image_url}
                 className='rounded-lg border border-gray-200 dark:border-none'

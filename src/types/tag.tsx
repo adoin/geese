@@ -1,5 +1,7 @@
 import { HomeItem } from '@/types/home';
 
+export const maxTotal = 20;
+
 export interface TagPageProps {
   tag_name: string;
   items: HomeItem[];
@@ -34,13 +36,15 @@ export interface SelectTag {
 
 export interface SelectTagItems {
   success: boolean;
-  data: SelectTag[];
+  data: PortalTagGroup[];
+  effected: string[];
 }
 
 export interface TagType {
   name: string;
   tid: string;
 }
+
 export interface PortalTag {
   name: string;
   tid: string;
@@ -48,6 +52,6 @@ export interface PortalTag {
 }
 
 export interface PortalTagGroup {
-  groupName: string;
+  group_name: string;
   tags: PortalTag[];
 }
